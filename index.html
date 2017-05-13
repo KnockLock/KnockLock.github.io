@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title>Simple App</title>
+  </head>
+  <style>
+    .button
+      {
+        background-color:#87CEEB;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+<body style = 'background-color: #4682B4'>
+  <div style="text-align:center">
+  <h1 id = "head"> Knock Lock </h1>
+  <h style = "color: white"> Code </h>
+  <input id = "code"></input>
+  <button id = "button" class = 'button' > Test 123 </button>
+</div>
+</body>
+
+<script>
+  const header = document.getElementById("head")
+  const butt = document.getElementById("button")
+  butt.addEventListener("click", myFunction);
+
+  butt.style.fontFamily = 'Garamond'
+
+
+  header.style.color = '#87CEEB'
+  header.style.fontFamily = 'Garamond'
+
+  function myFunction()
+    {
+      console.log(document.getElementById('code').value)
+      setTimeout(clearLog,2000)
+    }
+
+  function clearLog()
+    {
+        alert('Door was unlocked')
+        document.getElementById('code').value = null
+        console.clear()
+    }
+
+</script>
+</html>
